@@ -6,6 +6,7 @@ CREAR PROYECTO -> npx create-react-app .
 
 ////
 
+EJECUTAR PROYECTO ->  npm start
 
 In the project directory, you can run:
 
