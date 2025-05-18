@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: aliceblue; /* azul oscuro */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+}
