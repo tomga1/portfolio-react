@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './PedirDatosSobreMi.css';   
-
-
+import { fetchSobreMi } from '../helpers/pedirdatos';
+import Habilidades from './Habilidades';    
 
 export default function PedirDatosSobreMi() {
 
-    const [data, setData] = useState({});
-
-
-  useEffect(() => {
-    fetch('https://localhost:7222/api/SobreMi')
-      .then(response => response.json())
-      .then(json => setData(json))
+    const [data, setData] = useState([]);
+   
+      useEffect(() => {
+    fetchSobreMi()
+      .then(setData)
       .catch(error => console.error('Error al obtener los datos:', error));
-  }, []); 
+  }, []);
 
     console.log(data);
    return (
@@ -25,6 +23,8 @@ export default function PedirDatosSobreMi() {
 
             <h1>{item.nombre}</h1>
             <h2>{item.titulo}</h2>
+            <br />
+            <h3>Sobre mi</h3>
 
             <p className="descripcion">{item.descripcion}</p>
 
@@ -41,15 +41,13 @@ export default function PedirDatosSobreMi() {
 
             <blockquote className="frase">"{item.frase}"</blockquote>
 
-            <p><strong>Habilidades:</strong></p>
-            <ul>
-              {item.habilidades.split(',').map((hab, i) => (
-                <li key={i}>{hab.trim()}</li>
-              ))}
-            </ul>
+            
 
             <p><strong>Trabajo:</strong> {item.trabajo}</p>
             <p><strong>Posición:</strong> {item.posicion}</p>
+            <br />
+            <Habilidades item={item} />
+
           </div>
         ))
       ) : (

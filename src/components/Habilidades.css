@@ -1,0 +1,61 @@
+.habilidades-container {
+  margin-top: 1.5rem;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  color: #d4d4d4;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.toggle-btn {
+  width: 100%;
+  background-color: #2d2d2d;
+  color: #c3e88d;
+  font-weight: bold;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #333;
+}
+
+.toggle-btn:hover {
+  background-color: #3a3a3a;
+}
+
+.habilidades-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.8rem 1.2rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.habilidades-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #333;
+  font-size: 0.95rem;
+  color: #c3e88d;
+}
+
+.habilidades-list li:last-child {
+  border-bottom: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
