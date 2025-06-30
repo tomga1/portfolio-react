@@ -39,6 +39,11 @@ export default function PedirDatosSobreMi() {
               <a href={item.gitHubUrl} target="_blank" rel="noreferrer">GitHub</a>
             </div>
 
+
+            <div className="info-estudios">
+              <p><strong>Estudios actuales:</strong> {item.estudios}</p>
+            </div>
+
             <blockquote className="frase">"{item.frase}"</blockquote>
 
             
